@@ -1,0 +1,43 @@
+<escape><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API de Motos</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <p class="subtitulo">EXPLORE O MUNDO DAS DUAS RODAS</p>
+        <h1>🏍️ MOTOS ALEATÓRIAS</h1>
+
+        <form class="controls" id="formMoto">
+            <button type="button" id="botaoAleatorio">
+                🏍️ Motos Aleatórias
+            </button>
+
+            <input
+                type="text"
+                id="marca"
+                placeholder="Ex.: Honda, BMW, Kawasaki ou Yamaha"
+                aria-label="Digite a marca da moto"
+            >
+
+            <button type="submit">Procurar</button>
+        </form>
+
+        <p id="mensagem" role="status"></p>
+
+        <section class="motos-area">
+            <img
+                id="MOTOS"
+                src=""
+                alt="Imagem da moto"
+                hidden
+            >
+            <p id="instrucoes">Clique em “Motos Aleatórias” ou pesquise uma marca.</p>
+        </section>
+    </main>
+</body>
+</html></escape>

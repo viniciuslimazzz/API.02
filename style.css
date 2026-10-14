@@ -1,0 +1,209 @@
+/* ==============================
+   CONFIGURAÇÕES GERAIS
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #09090b, #18181b, #27272a);
+    color: #f4f4f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+/* ==============================
+   CONTAINER PRINCIPAL
+============================== */
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    padding: 40px;
+    background: rgba(24, 24, 27, 0.95);
+    border: 1px solid #3f3f46;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* ==============================
+   TÍTULO
+============================== */
+
+h1 {
+    color: #facc15;
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px rgba(250, 204, 21, 0.2);
+}
+
+.container::before {
+    content: "EXPLORE O MUNDO DAS DUAS RODAS";
+    display: block;
+    color: #a1a1aa;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+/* ==============================
+   ÁREA DE CONTROLES
+============================== */
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+/* ==============================
+   CAMPO DE PESQUISA
+============================== */
+
+.controls input {
+    flex: 1 1 300px;
+    min-width: 0;
+    padding: 15px 18px;
+    background: #09090b;
+    border: 2px solid #3f3f46;
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.controls input::placeholder {
+    color: #71717a;
+}
+
+.controls input:focus {
+    border-color: #facc15;
+    box-shadow: 0 0 0 4px rgba(250, 204, 21, 0.12);
+}
+
+/* ==============================
+   BOTÕES
+============================== */
+
+button {
+    padding: 15px 22px;
+    background: #facc15;
+    color: #18181b;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+    white-space: nowrap;
+}
+
+button:hover {
+    background: #fde047;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(250, 204, 21, 0.2);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* ==============================
+   ÁREA DAS MOTOS
+============================== */
+
+.motos-area {
+    width: 100%;
+    min-height: 250px;
+    margin-top: 25px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #09090b;
+    border: 2px dashed #3f3f46;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+/* IMAGEM DA MOTO */
+
+.motos-area img {
+    display: block;
+    width: 100%;
+    max-width: 750px;
+    max-height: 500px;
+    object-fit: contain;
+    border-radius: 12px;
+    transition: transform 0.4s;
+}
+
+.motos-area img[src=""] {
+    display: none;
+}
+
+.motos-area img:not([src=""]) {
+    background: #18181b;
+}
+
+.motos-area img:hover {
+    transform: scale(1.02);
+}
+
+/* ==============================
+   RESPONSIVIDADE
+============================== */
+
+@media (max-width: 600px) {
+    body {
+        padding: 15px 10px;
+    }
+
+    .container {
+        padding: 25px 15px;
+        border-radius: 18px;
+    }
+
+    h1 {
+        letter-spacing: 1px;
+    }
+
+    .container::before {
+        font-size: 0.65rem;
+        letter-spacing: 2px;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .controls input,
+    .controls button,
+    button {
+        width: 100%;
+    }
+
+    .motos-area {
+        min-height: 180px;
+        padding: 8px;
+    }
+}

@@ -1,0 +1,22 @@
+ {
+    "Honda": [
+        "honda.1.jpg",
+        "honda.2.jpg",
+        "honda.3.jpg"
+    ],
+    "BMW": [
+        "bmw.1.jpg",
+        "bmw.2.jpg",
+        "bmw.3.jpg"
+    ],
+    "Kawasaki": [
+        "kawasaki.1.jpg",
+        "kawasaki.2.jpg",
+        "kawasaki.3.jpg"
+    ],
+    "Yamaha": [
+        "yamaha.1.jpg",
+        "yamaha.2.jpg",
+        "yamaha.3.jpg"
+    ]
+}
